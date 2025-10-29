@@ -1,0 +1,19 @@
+name: "dbt_snowflake_project"
+version: "1.0"
+config-version: 2
+
+profile: "my_dbt_snowflake"
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  dbt_snowflake_project:
+    +materialized: view
+    staging:
+      +schema: dbt_db_schema
+    marts:
+      +schema: dbt_db_schema
