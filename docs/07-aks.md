@@ -292,6 +292,7 @@ az aks get-credentials --resource-group marketflow-rg --name marketflow-aks
 ```
 
 ### 7.3. Check Nodes and Create Namespaces
+
 ```bash
 kubectl get nodes -o wide
 ```
@@ -317,8 +318,10 @@ kube-system       Active   7m31s
 marketflow-dev    Active   24s
 marketflow-prod   Active   24s
 ```
-
+```
 kubectl get pods -A
+```
+```text
 NAMESPACE     NAME                                                  READY   STATUS    RESTARTS   AGE
 kube-system   ama-logs-22q8x                                        3/3     Running   0          8m44s
 kube-system   ama-logs-8crpd                                        3/3     Running   0          8m44s
@@ -345,3 +348,4 @@ kube-system   kube-proxy-8xfgs                                      1/1     Runn
 kube-system   kube-proxy-g94tf                                      1/1     Running   0          10m
 kube-system   metrics-server-6c4cb48ddc-qpxkp                       2/2     Running   0          9m3s
 kube-system   metrics-server-6c4cb48ddc-w92m8                       2/2     Running   0          9m3s
+```

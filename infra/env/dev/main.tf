@@ -4,9 +4,9 @@ module "azure_infra" {
   location     = var.location
 }
 
-module "snowflake_dwh" {
-  source             = "../../modules/snowflake"
-  snowflake_user     = var.snowflake_user
-  snowflake_password = var.snowflake_password
-  depends_on         = [module.azure_infra]
-}
+#module "snowflake_dwh" {
+#  source             = "../../modules/snowflake"
+#  snowflake_user     = var.snowflake_user
+#  snowflake_password = var.snowflake_password
+#  depends_on         = [module.azure_infra]
+#}
